@@ -1,0 +1,45 @@
+﻿Sub Test
+
+Dim IE,count, URL, page
+
+Browsers.Item(btIExplorer).Run("https://qa1.testamt.com/")
+Set IE = Sys.Process("IEXPLORE").BrowserWindow(0)
+IE.Maximize()
+
+Call login("Tania01", "Rimy", "100010")
+IE.Wait(7000)
+Set page = IE.Page("*")
+Log.Message page.URL
+If aqString.StrMatches(page.URL, "https://qa1.testamt.com/")  Then
+Log.Message "Log In Failed"
+End If
+
+Call login("Tania01", "Rimy11111!", "100010")
+count = 1
+Do While NOT IE.Find("className", "active", 50).Exists OR count > 4
+IE.Wait(5000)
+count = count + 1
+Loop  
+If IE.Find("className", "active", 50).Exists Then
+Log.Message "Successfully Log In"
+ELSE Log.Message "Log In Failed"
+End If
+
+End Sub
+
+Function login(uname, pass, cid)
+
+Dim IE
+Set IE = Sys.Process("IEXPLORE").BrowserWindow(0)
+
+IE.Find("idStr", "txtUSER_NAME", 50).SetText(uname)
+
+IE.Find("idStr", "txtPassword", 50).SetText(pass)
+
+IE.Find("idStr", "txtClient_Number", 50).SetText(cid)
+
+IE.Find("value", "Log in", 50).Click    
+
+End Function
+
+

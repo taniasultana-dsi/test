@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root signature="{24B6FA0B-0143-461A-9758-AEB9E9A9428B}" version="12.0" key="{303F4B2B-52E7-47FB-A892-D813963FD025}">
+	<children>
+		<child name="testAMT" key="{ACCB9A73-CB99-42B4-920C-19B2A44798B6}" type="Project" typeId="{362A8EE5-675E-43A9-869D-06ECE80B0CB4}" pluginName="">
+			<data path="testAMT\testAMT.mds" />
+		</child>
+	</children>
+	<folders />
+	<testItems key="{53B9E16E-CBBB-4AC1-8DE5-AFBD6FBE70E5}">
+		<children>
+			<testItem key="{ACCB9A73-CB99-42B4-920C-19B2A44798B6}" enabled="True" timeout="0" stopOnError="True" description="" />
+		</children>
+	</testItems>
+	<variables key="{07498EF4-8A1D-417C-9ED1-76345C116ED4}">
+		<data Version="3" />
+	</variables>
+	<analysis key="{132F55C6-0174-4A1E-B515-2AE48EC7DA04}" />
+	<scc key="{00000000-0000-0000-0000-000000000000}" name="">
+		<data />
+	</scc>
+	<extender key="{1A3FC97E-9A66-4716-B166-35D10B4146E0}" />
+</Root>
